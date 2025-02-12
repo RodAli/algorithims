@@ -1,6 +1,15 @@
 #include <stdio.h>
 
 /**
+ * Swaps two integer values.
+ */
+void swap(int *a, int *b) {
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
+/**
  * Main bubble sort algorithm. Takes in an array and sorts it in place.
  */
 void bubbleSort(int *arr, int n) {
@@ -18,9 +27,7 @@ void bubbleSort(int *arr, int n) {
             if (arr[j] > arr[j+1]) {
 
                 // Swap
-                tmp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = tmp;
+                swap(&arr[j], &arr[j+1]);
                 swapped = 1;
             }
         }    
