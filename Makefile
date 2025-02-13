@@ -1,16 +1,21 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -O2
 
-SRC = $(wildcard *.c)
+SRC_DIR = src
+OUT_DIR = out
 
-OUT = $(SRC:.c=)
+SRC = $(wildcard $(SRC_DIR)/*.c)
+OUT = $(patsubst $(SRC_DIR)/%.c, $(OUT_DIR)/%, $(SRC))
 
 all: $(OUT)
 
-%: %.c
+$(OUT_DIR)/%: $(SRC_DIR)/%.c | $(OUT_DIR)
 	$(CC) $(CFLAGS) -o $@ $<
 
+$(OUT_DIR):
+	mkdir -p $(OUT_DIR)
+
 clean:
-	rm -f $(OUT)
+	rm -rf $(OUT_DIR)
 
 .PHONY: all clean
