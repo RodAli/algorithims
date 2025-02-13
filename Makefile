@@ -1,12 +1,16 @@
-CC=gcc
+CC = gcc
+CFLAGS = -Wall -Wextra -O2
 
-all: bubblesort quicksort
+SRC = $(wildcard *.c)
 
-bubblesort: bubblesort.c
-	$(CC) bubblesort.c -o bubblesort 
+OUT = $(SRC:.c=)
 
-quicksort: quicksort.c
-	$(CC) quicksort.c -o quicksort
+all: $(OUT)
 
-clean: 
-	rm bubblesort
+%: %.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+clean:
+	rm -f $(OUT)
+
+.PHONY: all clean
