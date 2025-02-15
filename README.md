@@ -32,7 +32,12 @@ To compile and run yourself:
     git clone https://github.com/RodAli/algorithims.git
     ```
 
-2. In your preferred terminal, navigate to the root directory of your local repo, run `make`. This should compile all the algorithms into machine code.
+2. You can use the Makefile to compile all the C programs into their own runnable executables.
+In your preferred terminal, navigate to the root directory of your local repo and run:
+
+    ```bash
+    make
+    ```
 
 3. Compiled machine code should be outputted into folder called out. To run any program, lets say bubble sort, run:
 
