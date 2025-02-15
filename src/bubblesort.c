@@ -55,7 +55,7 @@ void printArray(int *arr, int n) {
 
 int main() {
     
-    int input_array[] = {9, 8, 2, 4, 10, 5, 8, 6, 3, 1, 7};
+    int input_array[] = {9, 8, 2, 4, 10, 5, 7, 6, 3, 1, 7};
     int size = 10;
 
     printf("Before:\n");
