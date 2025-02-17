@@ -7,12 +7,12 @@ The primary goal is not to achieve the most efficient implementation, but rather
 ### Current implementations
 
 #### Sorting Algorithms
-- [Bubble Sort](src/bubblesort.c)
-- [Selection Sort](src/selectionsort.c)
-- [Insertion Sort](src/insertionsort.c)
-- [Merge Sort](src/mergesort.c)
-- [Quick Sort](src/quicksort.c)
-- [Heap Sort](src/heapsort.c)
+- [Bubble Sort](src/bubble_sort.c)
+- [Selection Sort](src/selection_sort.c)
+- [Insertion Sort](src/insertion_sort.c)
+- [Merge Sort](src/merge_sort.c)
+- [Quick Sort](src/quick_sort.c)
+- [Heap Sort](src/heap_sort.c)
 
 #### Search Algorithms
 
@@ -20,7 +20,7 @@ TODO
 
 #### Data Structures
 
-TODO
+- [Linked List](src/linked_list.c)
 
 ### Usage
 
